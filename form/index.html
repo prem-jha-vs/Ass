@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="form">
+        <label for="name">Name:</label>
+        <input type="text" id="username">
+        <span id="nameError" class="error"></span><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="useremail">
+        <span id="emailError" class="error"></span><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" class="error"></span><br>
+
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById('username').value.trim();
+            const email = document.getElementById('useremail').value.trim();
+            const password = document.getElementById('password').value;
+
+            // Reset previous error messages
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+
+            // Validate Name
+            if (name === '') {
+                document.getElementById('nameError').textContent = 'Please Enter Your Name';
+                return;
+            }
+
+            // Validate Email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').textContent = 'Enter Valid Email';
+                return;
+            }
+
+            // Validate Password
+            if (password.length < 8 || !/[a-zA-Z]/.test(password) || !/[!@#$%^&*]/.test(password)) {
+                document.getElementById('passwordError').textContent = 'Password must be at least 8 characters long, contain at least 1 alphabet, and at least 1 special character';
+                return;
+            }
+
+            document.getElementById('form').submit();
+        }
+    </script>
+</body>
+</html>

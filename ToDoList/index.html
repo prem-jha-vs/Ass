@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        #button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>To-Do List</h2>
+
+    <div>
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button id="button" onclick="addTask()">Add Task</button>
+    </div>
+
+    <ul id="taskList">
+        
+    </ul>
+
+    <script>
+        function addTask() {
+            const taskInput = document.getElementById("taskInput");
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== "") {
+                const newTask = document.createElement("li");
+                newTask.textContent = taskText;
+                document.getElementById("taskList").appendChild(newTask);
+                taskInput.value = "";
+            }
+        }
+    </script>
+</body>
+</html>

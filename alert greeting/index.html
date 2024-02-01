@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Message</title>
+</head>
+<body>
+    <label for="textInput">Enter your Text</label>
+    <input type="text" id="textInput" placeholder="Your Text">
+
+    <button onclick="greetingMessage()">Click Me</button>
+
+    <script>
+        function greetingMessage(){
+            let textInput = document.getElementById('textInput').value;
+            alert(`Thank You! for the Input ${textInput}`);
+        }
+    </script>
+</body>
+</html>

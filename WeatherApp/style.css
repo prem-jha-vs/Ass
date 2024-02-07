@@ -1,8 +1,8 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, );
+    background: linear-gradient(135deg, #ffffff, #8b8b8b);
     color: #fff;
     text-align: center;
     overflow:visible;
@@ -12,10 +12,11 @@ body {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background: linear-gradient(135deg, #00feba, #5b548a);
+    background: linear-gradient(135deg, #427869, #463e71da);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: visible;
+    display: inline-table;
 }
 
 .search {
@@ -40,7 +41,7 @@ input {
 button {
     width: 30%;
     padding: 12px;
-    background: linear-gradient(to bottom, #1976d2, #1565c0);
+    background: linear-gradient(to bottom, #2f80d0, #224e81);
     color: #fff;
     border: none;
     border-radius: 20px;
@@ -70,7 +71,7 @@ button:hover {
 }
 
 .h3 {
-    background-color: #29d0d9bb;
+    background: linear-gradient(135deg, #337262, #3e3671d7);
     padding: 10px;
     border-radius: 5px;
     margin: 5px;

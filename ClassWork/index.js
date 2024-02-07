@@ -15,8 +15,6 @@
 //           }else{
 //             this.weakMap.set(key, value);
 //           }
-        
-
 //     }
 //     get(key){
 //        return this.weakMap.get(key);
@@ -24,10 +22,8 @@
 //     delete(key){
 //         this.weakMap.delete(key);
 //     }
-
 // }
 // const myCache = new Cache();
-
 // const key1 ={id: 1};
 // const key2 ={id: 2};
 

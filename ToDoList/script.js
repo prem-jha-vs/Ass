@@ -14,8 +14,8 @@ function addTask() {
 function deleteTask(index) {
     if(completed){
         tasks.splice(index, 1);
+        renderTasks();
     }
-    renderTasks();
 }
 
 function toggleTaskStatus(index) {

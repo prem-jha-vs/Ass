@@ -1,5 +1,4 @@
 const tasks = [];
-let completed = false;
 function addTask() {
     const taskInput = document.getElementById("taskInput");
     const taskText = taskInput.value.trim();
@@ -19,7 +18,6 @@ function deleteTask(index) {
 }
 
 function updateDone(index) {
-    completed = true;
     tasks[index].done = !tasks[index].done;
     renderTasks();
 }

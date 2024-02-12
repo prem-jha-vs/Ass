@@ -14,6 +14,8 @@ function deleteTask(index) {
     if(tasks[index].done){
         tasks.splice(index, 1);
         renderTasks();
+    }else{
+        alert("Please Done the task first");
     }
 }
 
@@ -35,7 +37,7 @@ function renderTasks() {
         }
         const markDoneButton = document.createElement('button');
         markDoneButton.id = 'mark_done_btn';
-        markDoneButton.textContent = 'Mark';
+        markDoneButton.textContent = 'Done';
         markDoneButton.addEventListener('click', () => updateDone(index));
 
         const deleteButton = document.createElement('button');

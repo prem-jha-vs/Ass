@@ -12,13 +12,13 @@ function addTask() {
 }
 
 function deleteTask(index) {
-    if(completed){
+    if(tasks[index].done){
         tasks.splice(index, 1);
         renderTasks();
     }
 }
 
-function toggleTaskStatus(index) {
+function updateDone(index) {
     completed = true;
     tasks[index].done = !tasks[index].done;
     renderTasks();
@@ -38,7 +38,7 @@ function renderTasks() {
         const markDoneButton = document.createElement('button');
         markDoneButton.id = 'mark_done_btn';
         markDoneButton.textContent = 'Done';
-        markDoneButton.addEventListener('click', () => toggleTaskStatus(index));
+        markDoneButton.addEventListener('click', () => updateDone(index));
 
         const deleteButton = document.createElement('button');
         deleteButton.id = 'delete_btn'

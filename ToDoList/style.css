@@ -108,7 +108,7 @@ li #mark_done_btn{
     transition: background-color 0.3s ease;
 }
 li #mark_done_btn:hover{
-    background-color: #69d0bcbd;
+    background-color: #44d7bae8;
 } 
 /* [id^="markDone-"] {
     background-color: rgba(63, 232, 63, 0.477);

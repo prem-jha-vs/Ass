@@ -35,7 +35,7 @@ function renderTasks() {
         }
         const markDoneButton = document.createElement('button');
         markDoneButton.id = 'mark_done_btn';
-        markDoneButton.textContent = 'Done';
+        markDoneButton.textContent = 'Mark';
         markDoneButton.addEventListener('click', () => updateDone(index));
 
         const deleteButton = document.createElement('button');

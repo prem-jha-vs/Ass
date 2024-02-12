@@ -162,6 +162,49 @@
 // performAll();
 
 
+async function chainedOperations() {
+    try {
+        const result1 = await asyncOperation1();
+        console.log("Result of operation 1:", result1);
+
+        const result2 = await asyncOperation2(result1);
+        console.log("Result of operation 2:", result2);
+
+        const result3 = await asyncOperation3(result2);
+        console.log("Result of operation 3:", result3);
+
+        return result3;
+    } catch (error) {
+        console.error("Error in chained operations:", error);
+        throw error;
+    }
+}
+
+async function asyncOperation1() {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(1), 1000);
+    });
+}
+
+async function asyncOperation2(result) {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(result + 2), 1000);
+    });
+}
+
+async function asyncOperation3(result) {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(result + 3), 1000);
+    });
+}
+
+chainedOperations()
+    .then(finalResult => {
+        console.log("Final result:", finalResult);
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
 
 
 

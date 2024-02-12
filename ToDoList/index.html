@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-    <style>
-        #button {
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -23,18 +19,6 @@
         
     </ul>
 
-    <script>
-        function addTask() {
-            const taskInput = document.getElementById("taskInput");
-            const taskText = taskInput.value.trim();
-
-            if (taskText !== "") {
-                const newTask = document.createElement("li");
-                newTask.textContent = taskText;
-                document.getElementById("taskList").appendChild(newTask);
-                taskInput.value = "";
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

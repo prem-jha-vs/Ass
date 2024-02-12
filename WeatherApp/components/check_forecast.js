@@ -1,4 +1,3 @@
-
 async function checkForecast(city) {
     try {
         const forecastResponse = await fetch(forecastApiUrl + city + `&appid=${apiKey}`);
